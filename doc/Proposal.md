@@ -7,8 +7,8 @@
 
 ## Proposed Work/Timeline
 * My proposed timeline is from May 6 through August 13, 2021.
-	* May and the first half of June will be dedicated to planning the code and storyline
-	* The rest of June will be dedicated to the actual implementation.
+	* The first half of May will be dedicated to planning the code and storyline
+	* The rest of May and June will be dedicated to the actual implementation.
 	* July will be dedicated to testing the game and writing a user manual
 	* August will be dedicated to polishing any last touches.
 
