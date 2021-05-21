@@ -47,12 +47,35 @@ you die with a message that should point you in the right direction.)
 * Each room has a temp inventory that reflects what the inventory looked like when the room was entered, which death will use to reset the inventory.
 * 
 2. System Analysis
-Would a factory class for the rooms apply here? Or a seperate class for each room with no factory
-	If coding the rooms ends up being pretty similar use a factory
-How does interacting with items work in games?
-Do I need a game engine? Not sure what those are or do other than being a template
-Are GUIs above my head?
+# Characters 
 
+# Player Scene (Custom Node, kinematicBody2d)
+## Script
+- extends kinematicbody2d
+- classname CHaracter
+- physics process function
+- use move and slide
+## Sprite node
+## CollisionShape2d
+* Shape rectangle
 
+# Geese Scene (KinematicBody2d)
+## Script
+- extends kb2d
+
+# Items
+# Shovel
+# Balloons
+# Backpack
+# Moldy sandwich
+# Wood
+# olive oil
+# pooper scooper 
+# Ladder
+
+# Levels (2d scenes)
+- Use tilemap for ground and house walls
+
+# Doors (Like portals)
 3. Functional Examples
 4. Test Cases
