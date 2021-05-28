@@ -53,7 +53,9 @@ you die with a message that should point you in the right direction.)
 	- classname CHaracter
 	- physics process function
 	- use move and slide
-	- will need to have a gravity variable to float up with balloons
+- Animation Player
+	- when balloons are used, animate a float up
+	- when balloons and backpack are used, float up and to the side, set down in next level portal
 - extends kb2d
 - physics_process 
 	- use velocity and delta variables 
@@ -63,28 +65,35 @@ you die with a message that should point you in the right direction.)
 
 - CollisionShape2d
 	- Shape rectangle
-
+- Area2d
+	- needs its own collision shape 2d (layer player, mask portal, items, geese)
+	- detect geese coming into 
 # Geese Scene (KinematicBody2d)
 - Script
+	- follows player around (velocity = position.direction_to(player.position)
+	- use area2d if i want a detect radius
 	- extends kb2d
 - collisionshape2d to detect player
-- follows player around (how to do this?)
+	- layer geese, mask wood and player
+
 
 # Items ( Custom Node, Area2d Scene)
 - Collision shape 2d
-```
-when area2d entered, give option to pick it up
-add item to inventory and give message to describe item
-```
+	- layer item, mask player
+- when area2d entered, give option to pick it up and descriptive message
+	- toggle each label visibility with on_area2d_entered
+- add item to inventory 
+
 - animation player
-```
-jump item when picked up
-```
+- jump item when picked up
+- queue_free to delete from scene
+
 # Shovel
 # Balloons
 # Backpack
 # Moldy sandwich
 # Wood
+- layer wood, mask geese
 # olive oil
 # pooper scooper 
 
@@ -98,7 +107,7 @@ jump item when picked up
 ## Level 1
 - area2d for the right edge
 - if shovel is used, dig to China
-- if use balloons without backpack, float away
+- if use balloons without backpack, float up
 - balloons w backpack floats into the portal hitbox to move to next level
 
 ## Level 2
@@ -117,5 +126,6 @@ jump item when picked up
 ```
 # Doors (Like portals)
 - area2d when entered, play next scene
+- layer portal, mask player
 3. Functional Examples
 4. Test Cases
