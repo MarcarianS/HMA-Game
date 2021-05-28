@@ -1,11 +1,14 @@
 |----Date----|
-|  May 4     | Create room ideas
-|  May 5     | Create room ideas, prep questions for meeting
-|  May 6     | Meeting, talk about game engines and language
-|  May 12    | Look into Godot vs Unity
-|  May 15    | Learn basics of Godot
-|  May 16    | Learn basics of Godot
-|  May 17    | Start on plan for code
-|  May 18    | Create map of characters and items
-|  May 20    | Continue working on structure of chars and objs
-
+|  May 4     | Create room ideas (2 hours)
+|  May 5     | Create room ideas, prep questions for meeting (1 hour)
+|  May 6     | First Meeting, talk about game engines and language (30 min)
+|  May 12    | Look into Godot vs Unity (2 hours)
+|  May 15    | Learn basics of Godot (3 hours)
+|  May 16    | Learn basics of Godot (2 hours)
+|  May 17    | Start on plan for code (30 min)
+|  May 18    | Create map of characters and items (1 hour)
+|  May 20    | Continue working on structure of chars and objs (1 hour)
+|  May 22    | Learn about UI construction for inventories (2 hours)
+|  May 24    | Structure of chars and objects, how to interact with items (2 hours)
+|  May 27    | Decide how character will move between levels (30 min)
+|  May 28    | Second Meeting

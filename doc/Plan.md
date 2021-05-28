@@ -36,34 +36,50 @@ you die with a message that should point you in the right direction.)
 	* Coat yourself in olive oil and glide right through
 # Level Six: 
 1. Problem Analysis
-* The program is run, and calls the story class
-* The inventory is an attribute of the story class (probably a set)
-* story.run is like a chronological holding for each room. 
+* Godot runs each scene's script when the game runs
 * No room is reached without the prior room's run function finishing
-* Each room has it's own class (or whether that class is used directly or factory is undecided)
 * Once each class has finished it's run function, the game is won
-* Each room's class will have a run function and a death function
-* The death function will give useful information based on how the user died, and will return back to the top of run 
-* Each room has a temp inventory that reflects what the inventory looked like when the room was entered, which death will use to reset the inventory.
-* 
+* The death function will give useful information based on how the user died
+* The inventory scene will only be accessible while in an interaction zone
+* Items will be picked up by y, left by n. 
+* Different levels have different portals to the next level, depending on where in the house you are
+
 2. System Analysis
 # Characters 
 
 # Player Scene (Custom Node, kinematicBody2d)
-## Script
-- extends kinematicbody2d
-- classname CHaracter
-- physics process function
-- use move and slide
-## Sprite node
-## CollisionShape2d
-* Shape rectangle
+- Script
+	- extends kinematicbody2d
+	- classname CHaracter
+	- physics process function
+	- use move and slide
+	- will need to have a gravity variable to float up with balloons
+- extends kb2d
+- physics_process 
+	- use velocity and delta variables 
+	- map arrow keys to move
+	- use function press value, 1 = right, -1 = left
+- when_on_wall to detect walls and items
+
+- CollisionShape2d
+	- Shape rectangle
 
 # Geese Scene (KinematicBody2d)
-## Script
-- extends kb2d
+- Script
+	- extends kb2d
+- collisionshape2d to detect player
+- follows player around (how to do this?)
 
-# Items
+# Items ( Custom Node, Area2d Scene)
+- Collision shape 2d
+```
+when area2d entered, give option to pick it up
+add item to inventory and give message to describe item
+```
+- animation player
+```
+jump item when picked up
+```
 # Shovel
 # Balloons
 # Backpack
@@ -71,11 +87,35 @@ you die with a message that should point you in the right direction.)
 # Wood
 # olive oil
 # pooper scooper 
-# Ladder
 
 # Levels (2d scenes)
 - Use tilemap for ground and house walls
+- use area2d boxes for iteractable areas
+- if inside an appropriate area, can use an item (Inventory icon pops up)
+- give message to report on how succussful the item use was
+- each level has a label at the top to give the player messages (invisible until applicable)
 
+## Level 1
+- area2d for the right edge
+- if shovel is used, dig to China
+- if use balloons without backpack, float away
+- balloons w backpack floats into the portal hitbox to move to next level
+
+## Level 2
+- 
+# Inventory (User interface scene)
+- texture Rectangle
+	- smaller than total gameplay window
+- vboxcontainer and hboxcontainers
+	- label for main title
+	- texture button for exit
+	- buttons for item boxes
+	- click an item to try using it
+	- item disappears from inventory when used  
+- label for any margins
+```
+```
 # Doors (Like portals)
+- area2d when entered, play next scene
 3. Functional Examples
 4. Test Cases
