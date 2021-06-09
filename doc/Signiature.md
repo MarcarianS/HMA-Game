@@ -11,4 +11,5 @@
 |  May 22    | Learn about UI construction for inventories (2 hours)
 |  May 24    | Structure of chars and objects, how to interact with items (2 hours)
 |  May 27    | Decide how character will move between levels (30 min)
-|  May 28    | Second Meeting
+|  May 28    | Second Meeting, discuss graphics and audio, and premise of game (30 min)
+|  May 28    | Layers vs masks for each scene (1 hour)

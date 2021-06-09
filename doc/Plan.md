@@ -127,5 +127,14 @@ you die with a message that should point you in the right direction.)
 # Doors (Like portals)
 - area2d when entered, play next scene
 - layer portal, mask player
+
+
+Would GDScript be okay
+Using limited graphics (blobs for characters)
+Using physics processes - are most engines similar in scripting this
+User Interface for inventory
+
+
+
 3. Functional Examples
 4. Test Cases
