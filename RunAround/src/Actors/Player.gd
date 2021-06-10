@@ -4,7 +4,7 @@ func _physics_process(_delta: float) -> void:
 	var is_jump_interrupted: = Input.is_action_just_released("jump") and _velocity.y < 0.0
 	var direction: = get_direction()
 	_velocity = calculate_move_velocity(_velocity, direction, speed, is_jump_interrupted)
-	_velocity = move_and_slide(_velocity, Vector2.UP)
+	_velocity = move_and_slide(_velocity, FLOOR_NORMAL)
 
 
 func get_direction() -> Vector2:

@@ -13,3 +13,6 @@
 |  May 27    | Decide how character will move between levels (30 min)
 |  May 28    | Second Meeting, discuss graphics and audio, and premise of game (30 min)
 |  May 28    | Layers vs masks for each scene (1 hour)
+|  June 6    | Create player scene, begin coding movement (2 hours)
+|  June 9    | Create goose scene, code goose to follow player (1.5 hour)
+|  June 10   | work on goose and get world graphics (40 min)

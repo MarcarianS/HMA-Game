@@ -1,3 +1,7 @@
+# Sources
+* Lots of syntax from Godot Docs
+* Framework from Godot Official youtube walkthroughs
+* Goose art from PixelArt user ThatBratCohen
 # Game Play
 * 2D adventure game, interactive world
 * Player will solve small puzzles in each room to move to the next room
