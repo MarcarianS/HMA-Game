@@ -16,3 +16,5 @@
 |  June 6    | Create player scene, begin coding movement (2 hours)
 |  June 9    | Create goose scene, code goose to follow player (1.5 hour)
 |  June 10   | work on goose and get world graphics (40 min)
+|  June 13   | Start balloons and research inventory (1 hour)
+|  June 15   | Code balloon ride and animation and begin inventory (5 hours)
