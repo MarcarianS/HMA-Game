@@ -18,3 +18,7 @@
 |  June 10   | work on goose and get world graphics (40 min)
 |  June 13   | Start balloons and research inventory (1 hour)
 |  June 15   | Code balloon ride and animation and begin inventory (5 hours)
+|  June 18   | Wonr on inventory (30 min)
+|  June 19   | Third Meeting, discuss interactivity, inventory, and progress
+|  June 21   | Inventory and messages logic (5 hours)
+|  June 22   | Inventory and messages, complete first puzzle (5 hours)

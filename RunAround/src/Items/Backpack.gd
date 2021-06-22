@@ -1,10 +1,17 @@
 extends Node2D
 
-var inventory_resource = preload("res://src/Inventory/Inventory.gd")
-var inventory = inventory_resource.new()
 
+signal item_encountered(name)
 signal inventory_changed(name)
 
 func _on_body_entered(body: Node) -> void:
-	emit_signal("inventory_changed", "Backpack")
-	queue_free()
+	print("backpack entered")
+	emit_signal("item_encountered", "Backpack")
+
+
+func _item_grabbed(boolean) -> void:
+	if boolean:
+		emit_signal("inventory_changed", "Wood")
+		emit_signal("inventory_changed", "Moldy Sandwich")
+		emit_signal("inventory_changed", "Pooper Scooper")
+		queue_free()
