@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://assets/item_slot_default_background.png" type="Texture" id=1]
 [ext_resource path="res://src/Inventory/Inventory.gd" type="Script" id=2]
 [ext_resource path="res://src/Inventory/Slot.gd" type="Script" id=3]
+[ext_resource path="res://src/Inventory/TextureButton.gd" type="Script" id=4]
 
 [sub_resource type="StyleBoxTexture" id=1]
 texture = ExtResource( 1 )
@@ -12,10 +13,8 @@ region_rect = Rect2( 0, 0, 18, 18 )
 script = ExtResource( 2 )
 
 [node name="TextureRect" type="TextureRect" parent="."]
-margin_left = 171.0
-margin_top = 206.0
-margin_right = 450.0
-margin_bottom = 250.0
+margin_right = 400.0
+margin_bottom = 125.0
 texture = ExtResource( 1 )
 expand = true
 __meta__ = {
@@ -23,100 +22,165 @@ __meta__ = {
 }
 
 [node name="Grid" type="GridContainer" parent="."]
-margin_left = 209.0
-margin_top = 211.0
-margin_right = 407.0
-margin_bottom = 245.0
-custom_constants/hseparation = 11
+margin_left = 24.0
+margin_top = 11.0
+margin_right = 286.0
+margin_bottom = 41.0
+custom_constants/vseparation = 2
+custom_constants/hseparation = 17
 columns = 5
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Slot1" type="Panel" parent="Grid"]
-margin_right = 30.0
-margin_bottom = 30.0
-rect_min_size = Vector2( 30, 30 )
+margin_right = 75.0
+margin_bottom = 75.0
+rect_min_size = Vector2( 75, 75 )
 custom_styles/panel = SubResource( 1 )
 script = ExtResource( 3 )
 
+[node name="TextureButton" type="TextureButton" parent="Grid/Slot1"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 6.0
+margin_top = 6.0
+margin_right = -6.0
+margin_bottom = -6.0
+rect_min_size = Vector2( 38, 23 )
+expand = true
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="Label" type="Label" parent="Grid/Slot1"]
-margin_left = 4.0
-margin_top = 15.0
-margin_right = 22.0
-margin_bottom = 9.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 3.0
+margin_top = 2.0
+margin_right = -3.0
+rect_min_size = Vector2( 0, 25 )
+size_flags_horizontal = 3
+custom_colors/font_color = Color( 0.0666667, 0.0588235, 0.0588235, 1 )
+autowrap = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Slot2" type="Panel" parent="Grid"]
-margin_left = 41.0
-margin_right = 71.0
-margin_bottom = 30.0
-rect_min_size = Vector2( 30, 30 )
+margin_left = 92.0
+margin_right = 167.0
+margin_bottom = 75.0
+rect_min_size = Vector2( 75, 75 )
 custom_styles/panel = SubResource( 1 )
 script = ExtResource( 3 )
 
+[node name="TextureButton" type="TextureButton" parent="Grid/Slot2"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 6.0
+margin_top = 6.0
+margin_right = -6.0
+margin_bottom = -6.0
+rect_min_size = Vector2( 38, 23 )
+expand = true
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="Label" type="Label" parent="Grid/Slot2"]
-margin_left = 4.0
-margin_top = 15.0
-margin_right = 22.0
-margin_bottom = 9.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 3.0
+margin_top = 2.0
+margin_right = -3.0
+margin_bottom = -6.0
+rect_min_size = Vector2( 0, 25 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+autowrap = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Slot3" type="Panel" parent="Grid"]
-margin_left = 82.0
-margin_right = 112.0
-margin_bottom = 30.0
-rect_min_size = Vector2( 30, 30 )
+margin_left = 184.0
+margin_right = 259.0
+margin_bottom = 75.0
+rect_min_size = Vector2( 75, 75 )
 custom_styles/panel = SubResource( 1 )
 script = ExtResource( 3 )
 
+[node name="TextureButton" type="TextureButton" parent="Grid/Slot3"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 6.0
+margin_top = 6.0
+margin_right = -6.0
+margin_bottom = -6.0
+rect_min_size = Vector2( 38, 23 )
+expand = true
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="Label" type="Label" parent="Grid/Slot3"]
-margin_left = 4.0
-margin_top = 15.0
-margin_right = 22.0
-margin_bottom = 9.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 3.0
+margin_top = 2.0
+margin_right = -3.0
+margin_bottom = -6.0
+rect_min_size = Vector2( 0, 25 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+autowrap = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Slot4" type="Panel" parent="Grid"]
-margin_left = 123.0
-margin_right = 153.0
-margin_bottom = 30.0
-rect_min_size = Vector2( 30, 30 )
+margin_left = 276.0
+margin_right = 351.0
+margin_bottom = 75.0
+rect_min_size = Vector2( 75, 75 )
 custom_styles/panel = SubResource( 1 )
 script = ExtResource( 3 )
+
+[node name="TextureButton" type="TextureButton" parent="Grid/Slot4"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 6.0
+margin_top = 6.0
+margin_right = -6.0
+margin_bottom = -6.0
+rect_min_size = Vector2( 38, 23 )
+expand = true
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Label" type="Label" parent="Grid/Slot4"]
-margin_left = 4.0
-margin_top = 15.0
-margin_right = 22.0
-margin_bottom = 9.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 3.0
+margin_top = 2.0
+margin_right = -3.0
+margin_bottom = 27.0
+rect_min_size = Vector2( 0, 25 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+autowrap = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Slot5" type="Panel" parent="Grid"]
-margin_left = 164.0
-margin_right = 194.0
-margin_bottom = 30.0
-rect_min_size = Vector2( 30, 30 )
-custom_styles/panel = SubResource( 1 )
-script = ExtResource( 3 )
-
-[node name="Label" type="Label" parent="Grid/Slot5"]
-margin_left = 4.0
-margin_top = 15.0
-margin_right = 22.0
-margin_bottom = 9.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="item_slot_default_background" type="Sprite" parent="."]
-position = Vector2( 190, 230 )
-texture = ExtResource( 1 )
+[connection signal="pressed" from="Grid/Slot1/TextureButton" to="Grid/Slot1/TextureButton" method="_on_pressed"]
+[connection signal="pressed" from="Grid/Slot2/TextureButton" to="Grid/Slot2/TextureButton" method="_on_pressed"]
+[connection signal="pressed" from="Grid/Slot3/TextureButton" to="Grid/Slot3/TextureButton" method="_on_pressed"]
+[connection signal="pressed" from="Grid/Slot4/TextureButton" to="Grid/Slot4/TextureButton" method="_on_pressed"]

@@ -1,8 +1,13 @@
 extends "res://src/Actors/actor.gd"
 
+
+func _ready() -> void:
+	set_physics_process(false)
+
 func _physics_process(delta: float) -> void:
 	_velocity.y += gravity * delta
-	_velocity = position.direction_to($"../Player".position) * speed
+	if get_node_or_null("../Player"):
+		_velocity = position.direction_to($"../Player".position) * speed
 	if _velocity.y < 0:
 		_velocity = move_and_slide(Vector2(_velocity.x, 0.0), FLOOR_NORMAL)
 	else:
@@ -18,4 +23,5 @@ func get_direction(_velocity: Vector2) -> void:
 		$goose_left.visible = false
 	else:
 		return
+
 

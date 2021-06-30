@@ -7,3 +7,7 @@ func _ready() -> void:
 	$Inventory.connect("give_inventory", $Balloons, "_get_items_from_inventory")
 	$Balloons.connect("send_message", $Messages, "_update_message")
 
+
+
+func _on_ResetButton_pressed() -> void:
+	get_tree().reload_current_scene()

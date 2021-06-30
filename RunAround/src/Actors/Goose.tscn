@@ -14,10 +14,9 @@ script = ExtResource( 2 )
 __meta__ = {
 "_edit_horizontal_guides_": [  ]
 }
-speed = Vector2( 200, 400 )
+speed = Vector2( 400, 400 )
 
 [node name="goose_left" type="Sprite" parent="."]
-visible = false
 position = Vector2( 8.47033e-22, -26 )
 scale = Vector2( 0.0425, 0.04375 )
 texture = ExtResource( 1 )
@@ -31,3 +30,8 @@ texture = ExtResource( 3 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 0, -24 )
 shape = SubResource( 1 )
+
+[node name="VisibilityEnabler2D" type="VisibilityEnabler2D" parent="."]
+rect = Rect2( -20, -50, 40, 50 )
+process_parent = true
+physics_process_parent = true

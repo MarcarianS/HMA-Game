@@ -22,3 +22,6 @@
 |  June 19   | Third Meeting, discuss interactivity, inventory, and progress
 |  June 21   | Inventory and messages logic (5 hours)
 |  June 22   | Inventory and messages, complete first puzzle (5 hours)
+|  June 25   | Polish first puzzle, begin second (1 hour)
+|  June 28   | Work on goose and item utility (4 hours)
+|  June 29   | Finish second puzzle, begin and finish third puzzle (6 hours)
