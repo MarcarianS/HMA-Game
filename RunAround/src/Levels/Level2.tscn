@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://src/Actors/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://src/Levels/TileMap.tscn" type="PackedScene" id=2]
@@ -11,6 +11,9 @@
 [ext_resource path="res://src/Levels/ResetButton.tscn" type="PackedScene" id=9]
 [ext_resource path="res://src/Levels/Level3.tscn" type="PackedScene" id=10]
 [ext_resource path="res://assets/BrickHouse.png" type="Texture" id=11]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 258, 10 )
 
 [node name="Level1" type="Node2D"]
 script = ExtResource( 4 )
@@ -82,7 +85,14 @@ position = Vector2( 1989, 433 )
 scale = Vector2( 5, 5 )
 texture = ExtResource( 11 )
 
+[node name="off_map_detector" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="off_map_detector"]
+position = Vector2( -192, 626 )
+shape = SubResource( 1 )
+
 [connection signal="pressed" from="TrapSwitch" to="." method="_on_TrapSwitch_pressed"]
 [connection signal="pressed" from="ResetButton" to="." method="_on_ResetButton_pressed"]
+[connection signal="body_entered" from="off_map_detector" to="." method="_on_off_map_detector_body_entered"]
 
 [editable path="Player"]

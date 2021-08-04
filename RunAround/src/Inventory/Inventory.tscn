@@ -1,13 +1,18 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://assets/item_slot_default_background.png" type="Texture" id=1]
 [ext_resource path="res://src/Inventory/Inventory.gd" type="Script" id=2]
 [ext_resource path="res://src/Inventory/Slot.gd" type="Script" id=3]
 [ext_resource path="res://src/Inventory/TextureButton.gd" type="Script" id=4]
+[ext_resource path="res://icon.png" type="Texture" id=5]
 
 [sub_resource type="StyleBoxTexture" id=1]
 texture = ExtResource( 1 )
 region_rect = Rect2( 0, 0, 18, 18 )
+
+[sub_resource type="StyleBoxTexture" id=2]
+texture = ExtResource( 5 )
+region_rect = Rect2( 0, 0, 64, 64 )
 
 [node name="Inventory" type="Node2D"]
 script = ExtResource( 2 )
@@ -40,6 +45,16 @@ rect_min_size = Vector2( 75, 75 )
 custom_styles/panel = SubResource( 1 )
 script = ExtResource( 3 )
 
+[node name="Highlight" type="Panel" parent="Grid/Slot1"]
+visible = false
+margin_right = 40.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 75, 75 )
+custom_styles/panel = SubResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="TextureButton" type="TextureButton" parent="Grid/Slot1"]
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -53,6 +68,7 @@ script = ExtResource( 4 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+slot_number = 1
 
 [node name="Label" type="Label" parent="Grid/Slot1"]
 anchor_top = 1.0
@@ -77,6 +93,16 @@ rect_min_size = Vector2( 75, 75 )
 custom_styles/panel = SubResource( 1 )
 script = ExtResource( 3 )
 
+[node name="Highlight" type="Panel" parent="Grid/Slot2"]
+visible = false
+margin_right = 40.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 75, 75 )
+custom_styles/panel = SubResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="TextureButton" type="TextureButton" parent="Grid/Slot2"]
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -90,6 +116,7 @@ script = ExtResource( 4 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+slot_number = 2
 
 [node name="Label" type="Label" parent="Grid/Slot2"]
 anchor_top = 1.0
@@ -98,9 +125,9 @@ anchor_bottom = 1.0
 margin_left = 3.0
 margin_top = 2.0
 margin_right = -3.0
-margin_bottom = -6.0
 rect_min_size = Vector2( 0, 25 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
+size_flags_horizontal = 3
+custom_colors/font_color = Color( 0.0666667, 0.0588235, 0.0588235, 1 )
 autowrap = true
 __meta__ = {
 "_edit_use_anchors_": false
@@ -113,6 +140,16 @@ margin_bottom = 75.0
 rect_min_size = Vector2( 75, 75 )
 custom_styles/panel = SubResource( 1 )
 script = ExtResource( 3 )
+
+[node name="Highlight" type="Panel" parent="Grid/Slot3"]
+visible = false
+margin_right = 40.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 75, 75 )
+custom_styles/panel = SubResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="TextureButton" type="TextureButton" parent="Grid/Slot3"]
 anchor_right = 1.0
@@ -127,6 +164,7 @@ script = ExtResource( 4 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+slot_number = 3
 
 [node name="Label" type="Label" parent="Grid/Slot3"]
 anchor_top = 1.0
@@ -135,9 +173,9 @@ anchor_bottom = 1.0
 margin_left = 3.0
 margin_top = 2.0
 margin_right = -3.0
-margin_bottom = -6.0
 rect_min_size = Vector2( 0, 25 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
+size_flags_horizontal = 3
+custom_colors/font_color = Color( 0.0666667, 0.0588235, 0.0588235, 1 )
 autowrap = true
 __meta__ = {
 "_edit_use_anchors_": false
@@ -150,6 +188,16 @@ margin_bottom = 75.0
 rect_min_size = Vector2( 75, 75 )
 custom_styles/panel = SubResource( 1 )
 script = ExtResource( 3 )
+
+[node name="Highlight" type="Panel" parent="Grid/Slot4"]
+visible = false
+margin_right = 40.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 75, 75 )
+custom_styles/panel = SubResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="TextureButton" type="TextureButton" parent="Grid/Slot4"]
 anchor_right = 1.0
@@ -164,6 +212,7 @@ script = ExtResource( 4 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+slot_number = 4
 
 [node name="Label" type="Label" parent="Grid/Slot4"]
 anchor_top = 1.0
@@ -172,9 +221,9 @@ anchor_bottom = 1.0
 margin_left = 3.0
 margin_top = 2.0
 margin_right = -3.0
-margin_bottom = 27.0
 rect_min_size = Vector2( 0, 25 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
+size_flags_horizontal = 3
+custom_colors/font_color = Color( 0.0666667, 0.0588235, 0.0588235, 1 )
 autowrap = true
 __meta__ = {
 "_edit_use_anchors_": false

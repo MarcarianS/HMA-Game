@@ -5,12 +5,15 @@ var is_ready: bool = false
 var items: Array
 
 signal send_message(message)
+signal balloon_entered(boolean)
 
 func _get_items_from_inventory(inventory):
 	items = inventory.get_items()
 
 func _on_body_entered(body: Node) -> void:
 	is_ready = true
+	emit_signal("balloon_entered", is_ready)
+	print("is ready", is_ready)
 
 
 func _physics_process(delta: float) -> void:

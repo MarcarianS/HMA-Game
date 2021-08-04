@@ -7,7 +7,6 @@ signal inventory_changed(name, image)
 signal remove_barrier()
 
 func _ready() -> void:
-	print($Inventory.get_child_count())
 	self.connect("message_changed", $Messages, "_update_message")
 	self.connect("inventory_changed", $Inventory, "_on_inventory_changed")
 	$OliveOil.connect("item_encountered", $Messages, "_make_decision")
@@ -53,3 +52,7 @@ func _on_Bowl_body_entered(body: Node) -> void:
 
 func _on_Bowl_body_exited(body: Node) -> void:
 	emit_signal("message_changed", "A tasty treat that can't be beat: Some Carbs, Some Fat, An Old Friend. Instructions: Mix together in a bowl and enjoy!")
+
+
+func _on_ResetButton_pressed() -> void:
+	get_tree().reload_current_scene()

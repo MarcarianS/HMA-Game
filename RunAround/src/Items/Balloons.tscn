@@ -24,14 +24,14 @@ tracks/0/keys = {
 }
 
 [sub_resource type="RectangleShape2D" id=3]
-extents = Vector2( 22, 121 )
+extents = Vector2( 23, 121 )
 
 [node name="Balloons" type="KinematicBody2D"]
 script = ExtResource( 2 )
 speed = Vector2( 300, 300 )
 
 [node name="balloons" type="Sprite" parent="."]
-position = Vector2( 0, -1.05636 )
+position = Vector2( 0, -30.7663 )
 scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 1 )
 

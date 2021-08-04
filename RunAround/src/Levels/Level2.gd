@@ -25,3 +25,8 @@ func _on_TrapSwitch_pressed() -> void:
 
 func _on_ResetButton_pressed() -> void:
 	get_tree().reload_current_scene()
+
+
+func _on_off_map_detector_body_entered(body: Node) -> void:
+	if body == $Player:
+		get_tree().reload_current_scene()
