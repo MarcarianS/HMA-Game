@@ -25,10 +25,8 @@ func get_direction() -> Vector2:
 		y_velocity = -1.0
 	elif is_ready and ($"../Player".position.y > 200 or !has_backpack):
 		y_velocity = -1.0
-		print("on ballon, don't have backpack")
 	elif is_ready and $"../Player".position.y < 200 and has_backpack:
 		y_velocity = 1.0
-	print(y_velocity)
 	return Vector2(
 		Input.get_action_strength("move_right") - Input.get_action_strength("move_left"),
 		y_velocity

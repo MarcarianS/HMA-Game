@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=2]
+[gd_scene load_steps=28 format=2]
 
 [ext_resource path="res://src/Actors/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://src/Inventory/Inventory.tscn" type="PackedScene" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://src/Items/Portal.tscn" type="PackedScene" id=7]
 [ext_resource path="res://assets/slime.jiggle.png" type="Texture" id=8]
 [ext_resource path="res://src/Levels/Level5.gd" type="Script" id=9]
+[ext_resource path="res://src/Items/Ladder.tscn" type="PackedScene" id=10]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 0, 64, 0, 64, 64, 0, 64 )
@@ -760,6 +761,10 @@ extents = Vector2( 246, 10 )
 
 [node name="Level5" type="Node2D"]
 script = ExtResource( 9 )
+__meta__ = {
+"_edit_horizontal_guides_": [ -360.0 ],
+"_edit_vertical_guides_": [ 1857.0 ]
+}
 
 [node name="TileMap" parent="." instance=ExtResource( 3 )]
 tile_set = SubResource( 15 )
@@ -785,11 +790,18 @@ margin_right = 1112.0
 margin_bottom = 297.0
 
 [node name="Portal" parent="." instance=ExtResource( 7 )]
-position = Vector2( 61, 292 )
+position = Vector2( 41, 292 )
+next_scene = ExtResource( 4 )
+
+[node name="Portal2" parent="." instance=ExtResource( 7 )]
+position = Vector2( 97, 294 )
 next_scene = ExtResource( 4 )
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
 position = Vector2( 1273, 454 )
+
+[node name="Camera2D" parent="Player" index="2"]
+limit_right = 1857
 
 [node name="slimejiggle" type="Sprite" parent="."]
 position = Vector2( 924, 476 )
@@ -901,5 +913,11 @@ texture = ExtResource( 8 )
 position = Vector2( 858, 538 )
 shape = SubResource( 17 )
 
+[node name="Ladder" parent="." instance=ExtResource( 10 )]
+position = Vector2( 62, 382 )
+
 [connection signal="pressed" from="ResetButton" to="." method="_on_ResetButton_pressed"]
 [connection signal="body_entered" from="slime_pit" to="." method="_on_slime_pit_body_entered"]
+[connection signal="body_entered" from="Ladder" to="." method="_on_Ladder_body_entered"]
+
+[editable path="Player"]

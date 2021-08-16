@@ -26,7 +26,7 @@ func _on_slippery_body_entered(body: Node) -> void:
 	emit_signal("change_message", "Get down from there, it's too slippery to jump from!")
 
 func _on_slippery2_body_entered(body: Node) -> void:
-	emit_signal("change_message", "Get down from there, it's too slippery to- ! Well, you've really done it now...")
+	emit_signal("change_message", "Get down from there, it's too slippery to- ! Well, I guess down the drain is one way out...")
 	anim_player.play("roll")
 	yield(get_tree().create_timer(2.0), "timeout")
 	emit_signal("remove_barrier")

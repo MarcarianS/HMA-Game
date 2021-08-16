@@ -22,7 +22,7 @@ func _physics_process(delta: float) -> void:
 		_velocity = Vector2(0.0, -1.0 * speed.y)
 		_velocity = move_and_slide(_velocity, FLOOR_NORMAL)
 		if $"../Balloons".position.y < 30:
-			emit_signal("send_message", "I know it's exciting, but if you're gonna keep bouncing, how 'bout you bounce your way out of here?")
+			emit_signal("send_message", "Freedom at last!")
 	elif is_ready and items.empty():
 		_velocity = Vector2(0.0, -1.0 * speed.y)
 		_velocity = move_and_slide(_velocity, FLOOR_NORMAL)

@@ -53,6 +53,7 @@ func _on_item_selected(name, slot_number):
 				resource = load("res://src/Items/PooperScooper.tscn")
 			"Olive Oil":
 				resource = load("res://src/Items/OliveOil.tscn")
+		print("item: ", name)
 		var instance = resource.instance()
 		_item_selected.clear()
 		_item_selected.append(instance)
@@ -62,7 +63,7 @@ func _unhandled_input(event: InputEvent) -> void:
 	if event is InputEventMouseButton and event.is_pressed():
 		if !_item_selected.empty():
 			var x = event.position.x
-			var y = 550
+			var y = event.position.y
 			var pos = Vector2(x, y)
 			_item_selected[0].set_position(pos)
 			self.add_child(_item_selected[0])
